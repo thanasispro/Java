@@ -6,6 +6,7 @@
 package interfacesmed;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -26,13 +27,14 @@ public class User implements Save {
     }
 
     @Override
-    public ArrayList<String> write() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public List<String> write() {
+      List<String> values=new ArrayList<String>();
+      return null;
     }
 
     @Override
-    public void read(ArrayList<String> savedValues) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void read(List<String> savedValues) {
+        
     }
 
     @Override
