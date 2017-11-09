@@ -9,25 +9,31 @@ package interfaces;
  *
  * @author Thanos
  */
-public class DeskPhone implements Telephone {
-    
+public class MobilePhone implements Telephone {
     private int myNum;
     private boolean isRinging;
+    private boolean isOn=false;
     
-    public DeskPhone(int myNum) {
+    public MobilePhone(int myNum) {
         this.myNum = myNum;
     }
     
 
     @Override
     public void powerOn() {
-        System.out.println("Desktop phone is always on");
+        isOn=true;
+        System.out.println("You turn on your phone!Welcome");
         
     }
 
     @Override
     public void dial(int telNum) {
+        if(isOn){
         System.out.println(telNum+"\nis on the phone");
+        }else{
+        System.out.println("Mobile phone is off");
+        }
+        
     }
 
     @Override
@@ -40,11 +46,12 @@ public class DeskPhone implements Telephone {
 
     @Override
     public boolean callphone(int telNum) {
-        if(telNum==myNum){
+        if(telNum==myNum && isOn){
             System.out.println("Ringing...");
             isRinging=true;
         }else{
             isRinging=false;
+            System.out.println("No such mobile phone or mobile phone is off");
         }
         return isRinging;
     }

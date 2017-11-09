@@ -16,6 +16,11 @@ public class Interfaces {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Telephone myphone;
+        myphone=new DeskPhone(69495488);
+        myphone.powerOn();
+        myphone.callphone(69495488);
+        myphone.answer();
     }
     
 }
